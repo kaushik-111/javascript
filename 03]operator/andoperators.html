@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1. Use &&  AND operator and display result among 4 values
+    </h1>
+    <form action="">
+        <label for="">
+            Enter First Number
+        </label><br>
+        <input type="text" id="fs1"><br>
+        <label for="">
+            Enter Secound Number
+        </label><br>
+        <input type="text" id="fs2">
+        <label for="">
+            Enter Third Number
+        </label><br>
+        <input type="text" id="fs1"><br>
+        <label for="">
+            Enter Forth Number
+        </label><br>
+        <input type="text" id="fs2">
+        <h1 id="ans"></h1>
+        <h1 id="ans2"></h1>
+    </form>
+</body>
+</html>
+<script>
+    let First_Number = document.getElementById("fs1").value
+    let Secound_Number = document.getElementById("fs2").value
+    let Third_Number = document.getElementById("fs1").value
+    let Forth_Number = document.getElementById("fs2").value
+    if (First_Number == Secound_Number && Third_Number == Forth_Number) {
+        document.getElementById("ans").innerHTML="this number is equal"
+    }else{
+        document.getElementById("ans2").innerHTML = "this number is not equal"
+    }
+</script>
