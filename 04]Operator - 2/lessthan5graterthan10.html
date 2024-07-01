@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1>Determine if a number is either less than 5 or greater than 10.</h1>
+        <label for="">Enter a number</label>
+        <input type="number" id="num">
+
+
+        <h1 id="ans"></h1>
+
+    </center>
+</body>
+</html>
+<script>
+    let num1 = document.getElementById("num").value
+
+
+    if (num < 5 && num > 10) {
+        document.getElementById("ans").innerHTML = "The number is either less than 5 or greater than 10."
+
+    } else {
+        document.getElementById("ans").innerHTML = "The number is between 5 and 10 (inclusive)."
+    }
+    
+   
+</script>

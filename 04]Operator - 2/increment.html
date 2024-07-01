@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+    <h1>3. Add two numbers and increment by 1.</h1>
+    <h1>Enter a number</h1>
+    <input type="text" id="num1">
+    <h1 id="ans"></h1>
+
+</center>
+
+</body>
+</html>
+<script>
+     let num1 = document.getElementById("num1").value
+      num1++
+      console.log(num1);
+      document.getElementById("ans").innerHTML = "ans : -"+"   "+num1
+     
+</script>
