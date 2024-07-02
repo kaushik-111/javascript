@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary of Employee</title>
+</head>
+<body>
+    <center>
+    <h1>Q6. Take 3 input boxes calculate salary of employee(Bonus , PF , Insurance Income Tax)</h1>
+    <h1>Enter Salary</h1>
+    <input type="text" id="Salary">
+    <h1>Enter Bonus</h1>
+    <input type="text" id="Bonus">
+    <h1>Enter PF</h1>
+    <input type="text" id="PF">
+    <h1>Enter Insurance</h1>
+    <input type="text" id="Insurance">
+    <h1>Enter Income Tax</h1>
+    <input type="text" id="Income_Tax">
+     <h1 id="employee_salary"></h1>
+    </center>
+</body>
+</html>
+<script>
+let Salary = document.getElementById("Salary").value
+let Bonus = document.getElementById("Bonus").value
+let PF = document.getElementById("PF").value
+let Insurance = document.getElementById("Insurance").value
+let Income_Tax = document.getElementById("Income_Tax").value
+
+let employee_salary = +Salary + +Bonus - +PF - +Insurance - +Income_Tax
+
+document.getElementById("employee_salary").innerHTML = "employee salary"+" "+ employee_salary
+</script>

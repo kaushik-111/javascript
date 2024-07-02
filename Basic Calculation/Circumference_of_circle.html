@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Q3. Take value in an input boxes and  find Circumference of circle</h1>
+
+    <h1>Enter Radius</h1>
+    <input type="text" id="Radius">
+    <h1 id="Circumference_of_circle"></h1>
+</center>
+</body>
+</html>
+<script>
+    let Radius = document.getElementById("Radius").value
+ 
+    let Circumference_of_circle = 2 * 3.14  * Radius
+
+    document.getElementById("Circumference_of_circle").innerHTML = "Circumference   of circle : -" +" " + Circumference_of_circle
+    console.log(Circumference_of_circle)
+
+
+</script>

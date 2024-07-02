@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Q5. Take  5 input boxes add all of them then multiply by 2 .</h1>
+
+
+    <h1>Enter 1st Number</h1>
+    <input type="text" id="num1">
+    
+    <h1>Enter 2st Number</h1>
+    <input type="text" id="num2">
+
+    <h1>Enter 3st Number</h1>
+    <input type="text" id="num3">
+
+    <h1>Enter 4st Number</h1>
+    <input type="text" id="num4">
+
+    <h1>Enter 5st Number</h1>
+    <input type="text" id="num5">
+
+    <h1 id="sum"></h1>
+</center>
+</body>
+</html>
+<script>
+    
+    let num1 = document.getElementById("num1").value
+    let num2 = document.getElementById("num2").value
+    let num3 = document.getElementById("num3").value
+    let num4 = document.getElementById("num4").value
+    let num5 = document.getElementById("num5").value
+
+    let sum = (+num1  + +num2  + +num3 + +num4 + +num5) * +2
+
+    document.getElementById("sum").innerHTML = " sum : -" +" " + sum
+
+
+
+</script>

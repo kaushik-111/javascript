@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Q1. Take value in an input boxes and  find Simple Interest</h1>
+
+    <h1>Enter Principle</h1>
+    <input type="text" id="Principle">
+    <h1>Enter Rate</h1>
+    <input type="text" id="Rate">
+    <h1>Enter Time</h1>
+    <input type="text" id="Time">
+    <h1 id="Simple_Interest"></h1>
+</center>
+</body>
+</html>
+<script>
+    let Principle = document.getElementById("Principle").value
+    let Rate = document.getElementById("Rate").value
+    let Time = document.getElementById("Time").value
+
+    let Simple_Interest = Principle * Rate * Time / 100
+
+    document.getElementById("Simple_Interest").innerHTML = "Simple_Interest : -" +" " + Simple_Interest
+    console.log(Simple_Interest)
+
+
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Q4. Take value in an input boxes and  find area of a square</h1>
+
+    <h1>Enter Length</h1>
+    <input type="text" id="Length">
+    
+    <h1>Enter width</h1>
+    <input type="text" id="Width">
+    <h1 id="area_of_square"></h1>
+</center>
+</body>
+</html>
+<script>
+    let Length = document.getElementById("Length").value
+    let Width = document.getElementById("Width").value
+ 
+    let area_of_square = +Length  * +Width
+
+    document.getElementById("area_of_square").innerHTML = "area of a square : -" +" " + area_of_square
+    console.log(area_of_square)
+
+
+</script>
