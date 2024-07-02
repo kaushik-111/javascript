@@ -1,0 +1,22 @@
+<!--  Take value in an input boxes and  calculate bill allow user to add price of dishes and deduct GST. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> gst </title>
+</head>
+<body>
+    <big>Enter the value of your dish : <input type="text" id="bill"></big>
+
+    <h1 id="actual_value"></h1>
+</body>
+</html>
+
+<script>
+    let bill = document.getElementById("bill").value;
+    let actual_bill = bill / 1.18;
+
+    document.getElementById("actual_value").innerHTML = actual_bill;
+</script>
