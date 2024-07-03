@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largest_number</title>
+</head>
+
+<body>
+    <h1>3. Implement a program that calculates the largest among five numbers entered by the user.</h1>
+    <h1>Enter First Number</h1>
+    <input type="text" id="num1">
+    <h1>Enter Secound Number</h1>
+    <input type="text" id="num2">
+    <h1>Enter Third Number</h1>
+    <input type="text" id="num3">
+    <h1>Enter Fourth Number</h1>
+    <input type="text" id="num4">
+    <h1>Enter fiveth Number</h1>
+    <input type="text" id="num5">
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+<script>
+    let num1 = document.getElementById("num1").value
+    let num2 = document.getElementById("num2").value
+    let num3 = document.getElementById("num3").value
+    let num4 = document.getElementById("num4").value
+    let num5 = document.getElementById("num5").value
+    num1 = parseInt(num1)
+    num2 = parseInt(num2)
+    num3 = parseInt(num3)
+    num4 = parseInt(num4)
+    num5 = parseInt(num5)
+
+    if (num1 == "" && num2 == "" && num3 == "" && num4 == "" && num5 == "") {
+        document.getElementById("ans").innerHTML = "Enter input number"
+    } else {
+
+        if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5) {
+            document.getElementById("ans").innerHTML = "This Number is largest" + " " + num1
+        } else if (num2 > num3 && num2 > num4 && num2 > num5) {
+            document.getElementById("ans").innerHTML = "This Number is largest" + " " + num2
+        } else if (num3 > num4 && num3 > num5) {
+            document.getElementById("ans").innerHTML = "This Number is largest" + " " + num3
+        } else if (num4 > num5) {
+            document.getElementById("ans").innerHTML = "This Number is largest" + " " + num4
+        } else {
+            document.getElementById("ans").innerHTML = "This Number is largest" + " " + num5
+        }
+
+    }
+
+</script>

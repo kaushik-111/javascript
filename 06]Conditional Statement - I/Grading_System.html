@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+</head>
+<body>
+    <h1>5. ** Grading System **</h1>
+    <h1>Enter a Marks</h1>
+    <input type="text" id="num">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let num = document.getElementById("num").value
+ 
+    if(num > 90 && num <= 100){
+        document.getElementById("ans").innerHTML = "Grade : A"
+    }else if(num > 80 && num <= 90){
+        document.getElementById("ans").innerHTML = "Grade : B"
+    }else if(num > 70 && num <= 80){
+        document.getElementById("ans").innerHTML = "Grade : C"
+    }else if(num > 60 && num <= 70){
+        document.getElementById("ans").innerHTML = "Grade : D"
+    }else if(num >= 0 && num <= 60){
+        document.getElementById("ans").innerHTML = "Grade : F"
+    }
+
+</script>

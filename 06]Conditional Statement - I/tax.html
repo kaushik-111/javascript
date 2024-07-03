@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ** Tax Calculator **</title>
+</head>
+<body>
+    <h1> ** Tax Calculator **</h1>
+    <h1>Enter Salary</h1>
+    <input type="text" id="income">
+    <h1 id = "Tax"></h1>
+</body>
+</html>
+<script>
+    let income = document.getElementById("income").value
+    if (income <= 10000 ) {
+        Tax =  income *  0.05
+        document.getElementById("Tax").innerHTML ="Tax :-" + " " + Tax
+    }else if(income <= 20000){
+        Tax = income * 0.05 + (income - 10000) * 0.05
+        document.getElementById("Tax").innerHTML ="Tax :-" + " " + Tax
+    }else if(income <= 30000){
+        Tax = income * 0.05 + ((income - 10000)*0.05) + (income - 20000) * 0.05
+        document.getElementById("Tax").innerHTML ="Tax :-" + " " + Tax
+   }else if(income <= 40000){
+    Tax = income * 0.05 + ((income - 10000)*0.05) + (income - 20000) * 0.05 +(income - 30000) * 0.05
+    document.getElementById("Tax").innerHTML ="Tax :-" + " " + Tax
+   }else if(income > 40000){
+    Tax = income * 0.05 + ((income - 10000)*0.05) + (income - 20000) * 0.05 +(income - 30000) * 0.05 + (income - 40000) * 0.05
+    document.getElementById("Tax").innerHTML ="Tax :-" + " " + Tax
+   }
+</script>
