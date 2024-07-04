@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>A simple JavaScript program to calculate and assign grades based on a student's percentage. The program should
+        take the percentage as input and output the corresponding grade (A, B, C, D, or F).</h1>
+
+    <h1>Enter a marks</h1>
+    <input type="text" id="mark">
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+<script>
+    let mark = document.getElementById("mark").value
+
+    mark = parseInt(mark)
+
+    if (isNaN(mark == "")) {
+        document.getElementById("ans").innerHTML = "Enter a Number"
+    } else {
+        if (mark <= 60) {
+            document.getElementById("ans").innerHTML = "Grade" + " : F" 
+        } else if (mark <= 70) {
+            document.getElementById("ans").innerHTML = "Grade" + " : D" 
+        } else if (mark <= 80) {
+            document.getElementById("ans").innerHTML = "Grade" + " : C" 
+        } else if (mark <= 90) {
+            document.getElementById("ans").innerHTML = "Grade" + " : B" 
+        } else if (mark > 90) {
+            document.getElementById("ans").innerHTML = "Grade" + " : A" 
+        }
+    }
+
+</script>

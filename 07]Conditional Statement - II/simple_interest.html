@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript program to calculate the simple interest. </h1>
+    <h1>Enter the principal amount</h1>
+    <input type="text" id="principal">
+    <h1>Enter the rate of interest</h1>
+    <input type="text" id="rate">
+    <h1>Enter the time in years</h1>
+    <input type="text" id="time">
+    <h1 id="Simple_Interest"></h1>
+</body>
+</html>
+<script>
+    let principal = document.getElementById("principal").value
+    let rate = document.getElementById("rate").value
+    let time = document.getElementById("time").value
+
+        let Simple_Interest = (+principal * +rate * +time )/ 100
+
+     document.getElementById("Simple_Interest").innerHTML = "Simple Interest : -"+" "+ Simple_Interest
+
+
+
+
+</script>
