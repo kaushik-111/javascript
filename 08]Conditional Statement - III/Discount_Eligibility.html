@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Eligibility</title>
+</head>
+<body>
+    <h1>**Description:** Create a JavaScript program with two boolean variables. Check if either of them is true and display the appropriate message:</h1>
+
+    <h1>Enter true/false:</h1>
+    <input type="text" id="Sunny">
+    <h1>Enter true/false:</h1>
+    <input type="text" id="Warm">
+
+    <h1 id="ans"></h1>
+
+    <script>
+      
+            let Sunny = document.getElementById("Sunny").value
+            let Warm = document.getElementById("Warm").value
+ 
+            if (Sunny == 'true' || Warm == 'true') {
+                document.getElementById("ans").innerHTML = "You are eligible for a discount.";
+            } else {
+                document.getElementById("ans").innerHTML = "You are not eligible for a discount.";
+            }
+  
+    </script>
+</body>
+</html>

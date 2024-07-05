@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Check</title>
+</head>
+<body>
+    <h1>Description: Write a JavaScript program that uses two boolean variables `isSunny` and `isWarm`. The program should check if either of these variables is true and display the appropriate message:</h1>
+    <h1>Weather Check:-</h1>
+    <h1>Enter Sunny (true/false):</h1>
+    <input type="text" id="Sunny">
+    <h1>Enter Warm (true/false):</h1>
+    <input type="text" id="Warm">
+
+    <h1 id="ans"></h1>
+
+    <script>
+      
+            let Sunny = document.getElementById("Sunny").value
+            let Warm = document.getElementById("Warm").value
+ 
+            if (Sunny == 'true' || Warm == 'true') {
+                document.getElementById("ans").innerHTML = "It's either sunny or warm (or both)";
+            } else {
+                document.getElementById("ans").innerHTML = "It's neither sunny nor warm.";
+            }
+  
+    </script>
+</body>
+</html>

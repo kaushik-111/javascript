@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Categorization</title>
+</head>
+<body>
+   <h1>**Description:** Write a JavaScript program that uses an "if-else ladder" in combination with logical operators to categorize a given number into different ranges and display a corresponding message. Follow these rules:</h1> 
+
+    <h1>Enter a Number</h1>
+    <input type="text" id="Number">
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+let Number = document.getElementById("Number").value
+//Number = parseInt(Number)
+if (Number == "") {
+    document.getElementById("ans").innerHTML = "enter input number"
+} else {
+    if ( Number > 0 &&  Number < 10) {
+    document.getElementById("ans").innerHTML = "The number is less than 10."
+}else if(Number > 10 && Number < 20 ){
+    document.getElementById("ans").innerHTML = "The number is between 10 and 20."
+}else if(Number > 20 && Number < 30 ){
+    document.getElementById("ans").innerHTML = "The number is between 20 and 30."
+}else{
+    document.getElementById("ans").innerHTML = "The number is greater than 30."
+} 
+}
+
+</script>
