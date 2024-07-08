@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <h1>Enter  your a to d</h1>
+     <input type="text" id="grade">
+     <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+
+    let grade = document.getElementById("grade").value
+
+   
+    switch (grade) {
+        case "a":
+            document.getElementById("ans").innerHTML = "Excellent job!"
+            break;
+    
+        case "b":
+            document.getElementById("ans").innerHTML= "Well done!"  
+            break;
+
+        case "c":
+            document.getElementById("ans").innerHTML= "Good job!"
+            break;
+            
+        case "d":
+            document.getElementById("ans").innerHTML = "You passed, but you can do better."
+            break;
+
+        case "f":
+            document.getElementsByClassName("ans").innerHTML = "Unfortunately, you failed."
+            break;
+        
+        default:
+            document.getElementById("ans").innerHTML = "Invalid grade."
+            break;
+    }
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>2. Using logical operators, write an expression to check if a variable `age` is either less than 18 or greater than 65.</h1>
+
+     <h1>Enter a age</h1>
+     <input type="text" id="age">
+     <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let age = document.getElementById("age").value
+    if (age > 18 && age < 65) {
+        document.getElementById("ans").innerHTML = age + " is either less than 18 or greater than 65."
+    }
+</script>
