@@ -1,0 +1,30 @@
+<!-- Write a  program to categorizes a person's age: "Child" (0-12), "Teen" (13-19), "Adult" (20-59), "Senior" (60+). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter age</h1>
+    <input type="text" id="in1">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let age = parseInt(document.getElementById("in1").value)
+    let category
+    if(age >= 0 && age <= 12){
+        category = "Child"
+    } else if(age >= 13 && age <= 19){
+        category = "Teen"
+    } else if(age >= 20 && age <= 59){
+        category = "Adult"
+    } else if(age >= 60){
+        category = "Senior"
+    } else {
+        category = "Invalid Age"
+    }
+    document.getElementById("ans").innerHTML = "Category: " + category
+</script>
