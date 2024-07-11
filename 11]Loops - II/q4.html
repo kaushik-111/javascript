@@ -1,0 +1,39 @@
+<!-- Print all prime numbers between 1 and n. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quesstion - 4</title>
+</head>
+<body>
+    <big>
+        Enter a number : 
+        <input type="text" id="number">
+
+        <h1 id="answer"></h1>
+    </big>
+</body>
+</html>
+
+<script>
+    let number = parseInt(document.getElementById("number").value);
+    let primeNumbers = [];
+
+    function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i <= parseInt(num / 2); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    }
+
+    for (let i = 2; i <= number; i++) {
+        if (isPrime(i)) {
+            primeNumbers.push(i);
+        }
+    }
+
+    document.getElementById("answer").innerHTML = primeNumbers.join(", ");
+</script>

@@ -1,0 +1,30 @@
+<!-- Count the number of digits in a given number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 5</title>
+</head>
+<body>
+    <big>
+        Enter a number : 
+        <input type="text" id="number">
+
+        <h1 id="answer"></h1>
+    </big>
+</body>
+</html>
+
+<script>
+    let number = parseInt(document.getElementById("number").value);
+    let count = 0;
+
+    while (number > 0) {
+        number = parseInt(number / 10);
+        count++;
+    }
+
+    document.getElementById("answer").innerHTML = `Number of digits: ${count}`;
+</script>
