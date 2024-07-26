@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    console.log("2.Write a function calculateSimpleInterest(principal, rate, time) that calculates and returns the simple interest based on the principal amount, interest rate, and time period.");
+    function simple_interest(principle_amount , annual_rate , time_period){
+        let interest = (principle_amount * annual_rate * time_period)/100;
+        return interest;
+    }
+
+    let principle_amount = 1000 ;
+    let annual_rate = 5;
+    let time_period = 2;
+    console.log("The simple interest is:"+simple_interest(principle_amount , annual_rate , time_period));
+</script>

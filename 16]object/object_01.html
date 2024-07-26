@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let Value = {
+        Number_01:{
+            num_1 : 10 ,
+            num_2 : 10 ,
+            num_3 : 10 ,
+            num_4 : 10 ,
+            num_5 : 10 ,
+        } ,
+
+        Number_02 : {
+            num_6 : 20 ,
+            num_7 : 20 ,
+            num_8 : 20 ,
+            num_9 : 20 ,
+            num_10: 20
+        }
+    }
+
+    //simple print of object
+    console.log(Value); //  print of Value
+    console.log(Value.Number_01); //print of value Number_01 
+    console.log(Value.Number_02); //print of value Number_02
+
+    //for loop print of onbject
+  
+   let keys = Object.keys(Value);
+   for (let i = 0; i < keys.length; i++) {
+    let key  = keys[i];
+    console.log(key);
+    console.log(Value[key]);
+    }
+    
+</script>
