@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   
+let age =  prompt("Enter a age : -");
+age = parseInt(age);
+let ticketPrice;
+
+if (age < 12) {
+    ticketPrice = 5;
+} else if (age < 18) {
+    ticketPrice = 10;
+} else if (age < 60) {
+    ticketPrice = 20;
+} else {
+    ticketPrice = 15;
+}
+
+console.log("The ticket price for age " + age + " is $" + ticketPrice);
+
+</script>

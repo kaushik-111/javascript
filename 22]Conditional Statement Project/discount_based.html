@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+let purchaseAmount = prompt("Please enter the purchase amount:");
+purchaseAmount = parseFloat(purchaseAmount);
+
+let discount;
+
+if (purchaseAmount >= 100) {
+    discount = 20;
+} else if (purchaseAmount >= 50) {
+    discount = 10;
+} else {
+    discount = 0;
+}
+
+console.log("The discount for a purchase amount of $" + purchaseAmount + " is $" + discount);
+
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+function sum_Of_Odd_Elements(array) {
+    return array
+        .filter(num => num % 2 !== 0)
+        .reduce((sum, num) => sum + num, 0); 
+}
+
+let inputArray = [1, 2, 3, 4];
+
+let result = sum_Of_Odd_Elements(inputArray);
+
+console.log(result); // 4
+
+
+
+</script>

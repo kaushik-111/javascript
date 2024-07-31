@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    const num = [1, 2, 3, -1, -2, -3, 0];
+
+
+    const positive = num.filter((Element) => { // filter use condition statement
+        if (Element > 0) {
+            return Element;
+        }
+    })
+
+    console.log(positive);
+
+
+    const positiv = num.reduce((accumulator, element) => {
+        if (element > 0) {
+            accumulator.push(element); // Add positive element to the accumulator array
+        }
+        return accumulator; // Return the accumulator for the next iteration
+    }, []); // Initial value for the accumulator is an empty array
+
+    console.log(positiv); // Output the array of positive numbers
+
+</script>
