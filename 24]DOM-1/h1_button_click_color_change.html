@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="new">
+
+    </div>
+
+    <button id="addbutton">add_text</button>
+    <button id="remove_button">remove text</button>
+
+    <h1 style="color: red;">kaushik</h1>
+    <h2 style="color: green;">kaushik</h2>
+    <h5 style="color: blue;">kaushik</h5>
+
+    <button id="green">green</button>
+    <button id="blue">blue</button>
+    <button id="red">red</button>
+    <button id="resent">resent</button>
+
+    <h3>rnw</h3>
+    <h3>rnw2</h3>
+    <h3>rnw3</h3>
+    
+</body>
+
+</html>
+<script>
+    let green = document.getElementById("green")
+
+    document.querySelectorAll("h3").forEach(function(h3) {
+    h3.style.color = "red";
+});
+
+    document.getElementById("green").addEventListener("click", function () {
+        document.querySelector('h1').style.color = 'green';
+        document.querySelector("h2").style.color = "green";
+        document.querySelector('h5').style.color = "green";
+    });
+    document.getElementById("blue").addEventListener("click",function(){
+    document.querySelector("h1").style.color = "blue";
+    document.querySelector("h2").style.color = "blue";
+    document.querySelector("h5").style.color = "blue";
+   });
+   document.getElementById("red").addEventListener("click",function(){
+    document.querySelector("h1").style.color = "red";
+    document.querySelector("h2").style.color = "red";
+    document.querySelector("h5").style.color = "red";
+   });
+   document.getElementById("resent").addEventListener("click",function(){
+    document.querySelector("h1").style.color = "red";
+    document.querySelector("h2").style.color = "green";
+    document.querySelector("h5").style.color = "blue";
+   }); 
+
+   document.getElementById("addbutton").addEventListener("click",function(){
+
+    let new_div = document.getElementById("new");
+    let p_tag = document.createElement("p");
+    p_tag.innerText = "kaushik rajput";
+    p_tag.style.color = "blue";
+                // Append the new <p> element to the new_div
+    new_div.appendChild(p_tag);
+   });
+
+   document.getElementById("remove_button").addEventListener("click",function(){
+    let new_div = document.getElementById("new");
+    // Remove the last <p> element added
+    let p_tags = new_div.getElementsByTagName("p");
+            if (p_tags.length > 0) {
+                new_div.removeChild(p_tags[p_tags.length - 1]);
+            }
+   });
+</script>
