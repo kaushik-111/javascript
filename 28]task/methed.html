@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // Initial Array
+let numbers = [1, 2, 3, 4, 5];
+
+// 1. push() - Add elements to the end of the array
+numbers.push(6, 7);
+console.log("After push:", numbers); // [1, 2, 3, 4, 5, 6, 7]
+
+// 2. pop() - Remove the last element from the array
+let poppedValue = numbers.pop();
+console.log("After pop:", numbers); // [1, 2, 3, 4, 5, 6]
+console.log("Popped value:", poppedValue); // 7
+
+// 3. slice() - Create a new array from a portion of the existing array
+let slicedArray = numbers.slice(1, 4);
+console.log("Sliced array:", slicedArray); // [2, 3, 4]
+
+// 4. splice() - Add or remove elements from the array
+numbers.splice(2, 1, 8, 9); // Removes 1 element at index 2 and adds 8, 9
+console.log("After splice:", numbers); // [1, 2, 8, 9, 5, 6]
+
+// 5. shift() - Remove the first element from the array
+let shiftedValue = numbers.shift();
+console.log("After shift:", numbers); // [2, 8, 9, 5, 6]
+console.log("Shifted value:", shiftedValue); // 1
+
+// 6. unshift() - Add elements to the beginning of the array
+numbers.unshift(0, 1);
+console.log("After unshift:", numbers); // [0, 1, 2, 8, 9, 5, 6]
+
+// 7. map() - Create a new array by applying a function to each element
+let mappedArray = numbers.map(num => num * 2);
+console.log("Mapped array (doubled):", mappedArray); // [0, 2, 4, 16, 18, 10, 12]
+
+// 8. filter() - Create a new array with elements that pass a test
+let filteredArray = numbers.filter(num => num > 5);
+console.log("Filtered array (greater than 5):", filteredArray); // [8, 9, 6]
+
+// 9. reduce() - Reduce the array to a single value by applying a function
+let sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log("Sum of numbers:", sum); // 31
+
+</script>

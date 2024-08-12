@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function validateAge(age) {
+    try {
+        if (typeof age !== 'number') {
+            throw new Error("Age must be a number");
+        }
+        if (age < 0) {
+            throw new Error("Age cannot be negative");
+        }
+        return `Valid age: ${age}`;
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+console.log(validateAge(25)); // Valid age: 25
+console.log(validateAge(-5)); // Error: Age cannot be negative
+console.log(validateAge("twenty")); // Error: Age must be a number
+
+</script>

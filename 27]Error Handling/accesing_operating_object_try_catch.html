@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function getProperty(obj, key) {
+    try {
+        if (!obj.hasOwnProperty(key)) {
+            throw new Error(`Property ${key} does not exist`);
+        }
+        return obj[key];
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+const person = { name: "Alice", age: 25 };
+
+console.log(getProperty(person, "name")); 
+console.log(getProperty(person, "gender")); 
+
+</script>

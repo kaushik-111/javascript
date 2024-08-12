@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function getElement(array, index) {
+    try {
+        if (index < 0 || index >= array.length) {
+            throw new Error("Index out of bounds");
+        }
+        return array[index];
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+const myArray = [10, 20, 30];
+
+console.log(getElement(myArray, 1)); // 20
+console.log(getElement(myArray, 5)); // Error: Index out of bounds
+
+</script>
