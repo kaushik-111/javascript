@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Person{
+        greet(){
+            console.log("hello person");
+        }
+    }
+    class Person2 extends Person{
+        greet(){
+            console.log("hello person2");
+        }
+    }
+    class Person3 extends Person{
+        greet(){
+            console.log("hello person3");
+        }
+    }
+
+    let obj = new Person3();
+    obj.greet();
+    console.log(obj);
+</script>

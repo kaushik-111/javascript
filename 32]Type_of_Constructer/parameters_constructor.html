@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class human{
+        constructor(name , age){
+            this.name = name || "gest",
+            this.age = age >= 0 || "invalid"
+        }
+    }
+
+    obj = new human("john , 19");
+    console.log(obj);
+    console.log(this.name);
+    console.log(this.age);
+    obj2 = new human();
+    console.log(obj2);
+    console.log(this.name);
+    console.log(this.age);
+</script>

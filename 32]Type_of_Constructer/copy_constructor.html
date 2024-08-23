@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    copy() {
+        return new Person(this.name, this.age);
+    }
+}
+
+let person = new Person("kaushik", 20); // Pass name and age as separate arguments
+let person2 = person.copy();
+
+console.log(person.name); // Output: kaushik
+console.log(person.age);  // Output: 20
+
+console.log(person2.name); // Output: kaushik
+console.log(person2.age);  // Output: 20
+
+</script>

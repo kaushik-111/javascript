@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    //  Simple Inheritance
+
+    class Animal {
+        constructor() {
+            this.type = "Unknown";
+        }
+
+        speak() {
+            return `${this.type} makes a sound.`;
+        }
+    }
+
+    //  Hierarchical Inheritance
+
+    class Dog extends Animal {
+        constructor(name, breed, age) {
+            super("Dog");
+            this.name = name;
+            this.breed = breed;
+            this.age = age;
+        }
+
+        speak() {
+            return `${this.name} barks!`;
+        }
+    }
+
+    // Hierarchical Inheritance
+
+    class Cat extends Animal {
+        constructor(name, color, age) {
+            super("Cat");
+            this.name = name;
+            this.color = color;
+            this.age = age;
+        }
+
+        speak() {
+            return `${this.name} meows!`;
+        }
+    }
+
+    // Simulating Multiple Inheritance
+
+    function canFlyMixin(Base) {
+        return class extends Base {
+            fly() {
+                return `${this.name} can fly!`;
+            }
+        };
+    }
+
+    //  Multiple Inheritance 
+
+    class Bird extends canFlyMixin(Animal) {
+        constructor(name, species) {
+            super("Bird");
+            this.name = name;
+            this.species = species;
+        }
+
+        speak() {
+            return `${this.name} chirps!`;
+        }
+    }
+
+    // Example Polymorphism
+
+    let animals = [
+        new Dog("Rex", "Golden Retriever", 5),
+        new Cat("Whiskers", "Black", 3),
+        new Bird("Tweety", "Canary")
+    ];
+
+    animals.forEach(animal => {
+        console.log(animal.speak());
+    });
+
+    // Conditional Classes
+
+    class PetFactory {
+        static createPet(petType, name, trait1, trait2) {
+            if (petType === "Dog") {
+                return new Dog(name, trait1, trait2);
+            } else if (petType === "Cat") {
+                return new Cat(name, trait1, trait2);
+            } else if (petType === "Bird") {
+                return new Bird(name, trait1);
+            } else {
+                return new Animal(petType);
+            }
+        }
+    }
+
+    let pet1 = PetFactory.createPet("Dog", "Buddy", "Labrador", 4);
+    let pet2 = PetFactory.createPet("Cat", "Mittens", "Gray", 2);
+    let pet3 = PetFactory.createPet("Bird", "Polly", "Parrot");
+
+    console.log(pet1.speak());
+    console.log(pet2.speak());
+    console.log(pet3.fly());
+
+</script>

@@ -1,0 +1,30 @@
+#container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.child {
+    height: auto;
+    width: 400px;
+    border: 1px solid white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}

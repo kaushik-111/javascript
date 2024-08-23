@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class employee{
+        constructor(name , position , salary){
+            this.name = name ,
+            this.position = position,
+            this.salary = salary
+        }
+        work(){
+            return console.log(`${this.name} is working as a ${this.position}.`);
+        }
+        getSalary() {
+           return console.log(`${this.name} earns $${this.salary} per year.`);
+    }
+    }
+
+    obj = new employee("kaushik" , "mernstack developer" , "90000");
+    obj.work();
+    obj.getSalary();
+</script>

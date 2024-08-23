@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Person{
+        constructor (name , age){
+            this.name = name ,
+            this.age = age
+        }
+
+        greet(){
+            return console.log(`Hello ${this.name}` , `your age ${this.age} years.` );
+        }
+    }
+
+    let obj = new Person("kaushik pipaliya" , 19);
+    obj.greet();
+
+    class Car {
+    constructor(name, model, brand) {
+        this.name = name;
+        this.model = model;
+        this.brand = brand;
+    }
+
+    info() {
+        console.log(`${this.name}`, `${this.model}`, `${this.brand}`);
+    }
+}
+
+let obj2 = new Car("Hyundai Creta", "Creta", "1.5");
+obj2.info();
+
+</script>
