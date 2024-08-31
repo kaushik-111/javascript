@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <h1 id="heading"></h1>
+    <h1 id="Countdown"></h1>
+    <button id="btn">Stop</button>
+    <button id="running">Start</button>
+</body>
+</html>
+<script>
+    setTimeout(() => {
+        console.log("kaushik");
+        document.getElementById("heading").textContent = "kaushik";
+    }, 900);
+
+    let Countdown = 0;
+    let interval;
+
+    function startCountdown() {
+        if (!interval) {
+            interval = setInterval(() => {
+                console.log("pipaliya");
+                if (Countdown <= 100) {
+                    document.getElementById("Countdown").textContent = Countdown;
+                    Countdown++;
+                } else {
+                    clearInterval(interval);
+                    interval = null; 
+                }
+            }, 900);
+        }
+    }
+
+    startCountdown();
+
+    document.getElementById("btn").addEventListener("click", () => {
+        clearInterval(interval);
+        interval = null; 
+    });
+
+    document.getElementById("running").addEventListener("click", () => {
+        startCountdown(); 
+    });
+</script>
