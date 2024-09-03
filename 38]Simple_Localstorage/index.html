@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    localStorage.setItem("name" , "kaushik"); // use for set item local storage
+    let user = localStorage.getItem("name"); // use for getitem localstorage to console item print;
+    console.log(user);
+    localStorage.removeItem("name"); // use for removeitem only one item  delet / remove;
+
+    localStorage.setItem("subject" , "html");
+    localStorage.setItem("subject" , "css");
+    localStorage.setItem("subject" , "jquery");
+
+    localStorage.clear();
+
+    //json - javascript object notaion
+
+    let obj = {
+        name : "kaushik"
+    }
+
+    localStorage.setItem("obj" , JSON.stringify(obj)); // use stringify for simple formate to json formate
+    let data = JSON.parse(localStorage.getItem("obj")); // json formate to console print
+    console.log(data); 
+
+
+</script>
