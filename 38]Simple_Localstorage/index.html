@@ -31,5 +31,9 @@
     let data = JSON.parse(localStorage.getItem("obj")); // json formate to console print
     console.log(data); 
 
+    const subjects = [ "html" , "css" , "bootstrap" , "jquery" , "javascript" , "react js" , "nodejs" , "mongo db" , "mysql" ];
+    localStorage.setItem("subjects" , JSON.stringify(subjects));
+    let storage_subjects = JSON.parse(localStorage.getItem("subjects"));
+    console.log(storage_subjects)
 
 </script>

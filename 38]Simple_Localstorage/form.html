@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Form Data in Local Storage</title>
+</head>
+<body>
+    <h2>Store Form Data in Local Storage</h2>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Get the form element
+const form = document.getElementById('userForm');
+
+// Add a submit event listener to the form
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get the values from the form fields
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const age = document.getElementById('age').value;
+
+    // Create an object to store the data
+    let userData = {
+        name: name,
+        email: email,
+        age: age
+    };
+
+    // Store the data in local storage as a JSON string
+    localStorage.setItem('userData', JSON.stringify(userData));
+
+    // Optionally, display a message or perform any other action
+    alert('Form data has been saved to local storage!');
+});
+
+// Retrieve data from local storage
+const storedData = localStorage.getItem('userData');
+
+if (storedData) {
+    const userData = JSON.parse(storedData);
+    console.log('Name:', userData.name);
+    console.log('Email:', userData.email);
+    console.log('Age:', userData.age);
+}
+    </script>
+</body>
+</html>
