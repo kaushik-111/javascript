@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        crud => create , read , update , delete
+        c => create , r => read , u => update , d => delete
+     -->
+
+     <form onsubmit="addData(event)">
+        <input type="text" placeholder="Enter Your Name" id="name">
+        <input type="text" placeholder="Enter Your Subject" id="subject">
+        <input type="submit">
+     </form>
+     <script>
+        let name = document.getElementById("name");
+        let subject = document.getElementById("subject");
+        function addData(event) {
+            event.preventDefault()
+
+            let existingData = JSON.parse(localStorage.getItem("student")) || []; // console print 
+            let obj = {
+                name:name.value ,
+                subject:subject.value
+            }
+            console.log(obj)
+            existingData.push(obj) // arry object 
+            localStorage.setItem("student" , JSON.stringify(existingData)) // local storage print
+            // console.log(existingData);
+
+            name.value = ""  // mt-string = use for mt-string input submit after empty
+            subject.value = ""
+            
+        }
+     </script>
+</body>
+</html>
