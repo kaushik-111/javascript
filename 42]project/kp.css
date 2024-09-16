@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form_content {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#form {
+    height: 65%;
+    width: 40%;
+    border-radius: 15px;
+    background-color: rgba(15, 29, 42, 0.625);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#image-url,
+#image-name,
+#image-date,
+#image-email,
+#image-address {
+    height: 50px;
+    width: 240px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-indent: 10px;
+    color: white;
+    font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#image-url::placeholder,
+#image-name::placeholder,
+#image-date::placeholder,
+#image-email::placeholder,
+#image-address::placeholder {
+    font-size: 20px;
+    color: white;
+    text-indent: 72px;
+}
+
+#add-btn {
+    height: 50px;
+    width: 78%;
+    border: 1px solid white;
+    background: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+#add-btn:hover{
+    border: 1px solid rgb(213, 23, 23);
+}
+
+#show-div {
+    height: 65%;
+    width: 45%;
+    overflow-y: scroll;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(15, 29, 42, 0.792);
+    padding: 20px 10px;
+}
+
+#show-div::-webkit-scrollbar {
+    display: none;
+}
