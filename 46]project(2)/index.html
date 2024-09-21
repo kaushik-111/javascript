@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            align-items: center;
+            background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-technical-background-of-pcb-image_400131303.jpg");
+        }
+
+        .data {
+            background-color: rgba(230, 232, 237, 0.253);
+            height: 79vh;
+            width: 21%;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: rgba(204, 219, 232, 0.779) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+        }
+
+        .image {
+            height: 50vh;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .text {
+            color: white;
+            font-weight: bold;
+            font-family:  cursive;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+
+    <script>
+        let container = document.getElementsByClassName("container")[0];
+
+        async function fetchApi() {
+            try {
+                let fetchData = await fetch("https://fakestoreapi.com/products");
+                let response = await fetchData.json();
+
+                console.log(response);
+
+                response.forEach(element => {
+                    let data = document.createElement("div");
+                    data.className = "data";
+
+                    let img = document.createElement("img");
+                    img.src = element.image;
+                    img.alt = element.title;
+                    img.className = "image";
+                    data.appendChild(img);
+
+                    let title = document.createElement("h3");
+                    title.textContent = `${element.title.slice(0, 40)}${element.title.length > 40 ? '...' : ''}`;
+                    title.className = "text";
+                    data.appendChild(title);
+
+                    let price = document.createElement("p");
+                    price.textContent = `Price: $${element.price}`;
+                    price.className = "text";
+                    data.appendChild(price);
+
+                    let description = document.createElement("p");
+                    description.textContent = `Description: ${element.description.slice(0, 50)}${element.description.length > 80 ? '...' : ''}`;
+                    description.className = "text";
+                    data.appendChild(description);
+
+                    let category = document.createElement("p");
+                    category.textContent = `Category: ${element.category}`;
+                    category.className = "text";
+                    data.appendChild(category);
+
+                    let rate = document.createElement("p");
+                    rate.textContent = `Rating: ${element.rating.rate} (${element.rating.count} reviews)`;
+                    rate.className = "text";
+                    data.appendChild(rate);
+
+
+                    container.appendChild(data);
+                });
+
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+
+        fetchApi();
+    </script>
+</body>
+
+</html>
