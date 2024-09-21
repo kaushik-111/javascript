@@ -4,82 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CORONA API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 <style>
+    * {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: oblique;
+    }
 
-    .container{
+    .container {
         height: auto;
         width: 100%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 20px;
+        padding: 20px;
+        background-image: url("https://static.vecteezy.com/system/resources/previews/011/351/207/non_2x/abstract-technology-futuristic-glowing-blue-and-purple-light-lines-with-speed-motion-effect-on-dark-blue-background-free-vector.jpg");
+        background-attachment: fixed;
+        background-blend-mode: darken;
     }
-    .data{
-        background-color:black; 
-        height:auto; 
-        width:48%;
-        padding:10px; 
+
+    .data {
+        background-color: rgba(169, 176, 188, 0);
+        height: auto;
+        width: 45%;
+        padding: 5px 20px;
         border-radius: 15px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     }
 </style>
-<body>
-<div class="container">
 
-</div>
+<body>
+    <div class="container">
+
+    </div>
 </body>
 
 </html>
 <script>
-   let container = document.getElementsByClassName("container")[0];
-async function fetchApi() {
-    try {
-        let fetchData = await fetch("https://api.covidtracking.com/v1/states/info.json");
-        console.log(fetchData);
+    let container = document.getElementsByClassName("container")[0];
+    async function fetchApi() {
+        try {
+            let fetchData = await fetch("https://api.covidtracking.com/v1/states/info.json");
+            console.log(fetchData);
 
-        let response = await fetchData.json();
-        console.log(response);
+            let response = await fetchData.json();
+            console.log(response);
 
-        response.forEach(element => {
-            let data = document.createElement("div");
-            data.className = "data";
-            
-            let text = document.createElement("h1");
-            text.style = "color:white; font-weight:bold;";
-            text.textContent = `Name: ${element.name}`;
-            data.appendChild(text);
+            response.forEach(element => {
+                let data = document.createElement("div");
+                data.className = "data";
 
-            let flips = document.createElement("p");
-            flips.style = "color:white; font-weight:bold;font-size:20px;";
-            flips.textContent = `Notes: ${element.notes ? element.notes.slice(0, 100) + (element.notes.length > 100 ? '...' : '') : 'No notes available'}`;
-            data.appendChild(flips);
+                let text = document.createElement("h1");
+                text.style = "color:white; font-weight:bold;";
+                text.textContent = `Name: ${element.name}`;
+                data.appendChild(text);
 
-            let pum = document.createElement("p");
-            pum.style = "color:white; font-weight:bold;font-size:20px;";
-            pum.textContent = `PUM: ${element.pum ? element.pum.slice(0, 100) + (element.pum.length > 100 ? '...' : '') : 'No PUM data'}`;
-            data.appendChild(pum);
+                let flips = document.createElement("p");
+                flips.style = "color:white; font-weight:bold;font-size:20px;";
+                flips.textContent = `Notes: ${element.notes ? element.notes.slice(0, 100) + (element.notes.length > 100 ? '...' : '') : 'No notes available'}`;
+                data.appendChild(flips);
 
-            let state = document.createElement("p");
-            state.style = "color:white;font-weight:bold;font-size:20px;";
-            state.textContent = `State: ${element.state}`;
-            data.appendChild(state);
+                let pum = document.createElement("p");
+                pum.style = "color:white; font-weight:bold;font-size:20px;";
+                pum.textContent = `PUM: ${element.pum ? element.pum.slice(0, 100) + (element.pum.length > 100 ? '...' : '') : 'No PUM data'}`;
+                data.appendChild(pum);
 
-            let twitter = document.createElement("p");
-            twitter.style = "color:white;font-weight:bold;font-size:20px;";
-            twitter.textContent = `Twitter: ${element.twitter || 'No Twitter handle'}`;
-            data.appendChild(twitter);
+                let state = document.createElement("p");
+                state.style = "color:white;font-weight:bold;font-size:20px;";
+                state.textContent = `State: ${element.state}`;
+                data.appendChild(state);
 
-            container.appendChild(data);
-        });
+                let twitter = document.createElement("p");
+                twitter.style = "color:white;font-weight:bold;font-size:20px;";
+                twitter.textContent = `Twitter: ${element.twitter || 'No Twitter handle'}`;
+                data.appendChild(twitter);
 
-    } catch (error) {
-        console.error("Error fetching data:", error);
+                container.appendChild(data);
+            });
+
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
     }
-}
 
-fetchApi();
+    fetchApi();
 
 
 
