@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg: #d6e3ff;
+    --box: #01041a;
+    --success: #1b9b2e;
+    --text: #fff;
+    --place-holder: #d4d3d3;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100vh;
+    background-image: url("https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg");
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#write-tasks{
+    height: 70px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 12px;
+    border-radius: 15px;
+    box-shadow: rgba(204, 219, 232, 0.779) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: #243bcf2c;
+}
+
+#task-input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: var(--text);
+    padding-left: 20px;
+    background: transparent;
+}
+#task-input::placeholder{
+    color: var(--place-holder);
+}
+
+#add-task{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: var(--box);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#display-tasks{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    gap: 15px;
+}
+
+#pending-tasks, #completed-tasks{
+    width: 50%;
+    background-color: #243bcf2c;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 15px;
+    color: var(--text);
+    border: 1px solid #ccc;
+    box-shadow: rgba(204, 219, 232, 0.779) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+}   
+
+
+#pending-list, #completed-list{
+    font-size: 20px;
+    height: 85%;
+    overflow: scroll;
+    background-color: #243bcf2c;
+
+}
+#pending-list, #completed-list {
+    overflow: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+#pending-list::-webkit-scrollbar, #completed-list::-webkit-scrollbar {
+    display: none; 
+}
+
+#pending-list > div:nth-child(even), #completed-list > div:nth-child(even){
+    background-color: #f9f9f91f;
+    border-radius: 15px;
+}
+#pending-list > div:nth-child(odd), #completed-list > div:nth-child(odd){
+    background-color: #f9f9f93e;
+    border-radius: 15px;
+}
+
+.single-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #243bcf2c;
+    border-radius: 15px;
+    box-shadow: rgba(204, 219, 232, 0.779) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button .material-symbols-outlined {
+    font-size: 24px;
+}
+
+.undo-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: var(--box);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: var(--box);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: var(--box);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group{
+    display: flex;
+    gap: 10px;
+}
