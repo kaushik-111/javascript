@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form_content {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#form {
+    height: 70%;
+    width: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border: 2px solid;
+    animation: colorChange 3s infinite;
+    box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(30, 64, 137, 0.5) -3px -3px 6px 1px inset;
+}
+@keyframes colorChange {
+    0% {
+        box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(27, 71, 110, 0.458) -3px -3px 6px 1px inset;
+        border-color:rgba(27, 71, 110, 0.458) ;
+    }
+    50% {
+        box-shadow: rgba(88, 139, 190, 0.458) 3px 3px 6px 0px inset, rgba(100, 178, 197, 0.5) -3px -3px 6px 1px inset;
+        border-color: rgba(38, 176, 194, 0.458);
+    }
+    100% {
+        box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(27, 71, 110, 0.458) -3px -3px 6px 1px inset;
+        border-color:rgba(27, 71, 110, 0.458) ;
+    }
+}
+
+#Product-Image,
+#Product-Name,
+#Product-Price,
+#Product-Description {
+    height: 60px;
+    width: 300px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    border: 0.5px solid;
+    animation: colorChange 3s infinite;
+    box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(30, 64, 137, 0.5) -3px -3px 6px 1px inset;
+}
+
+#Product-Image::placeholder,
+#Product-Name::placeholder,
+#Product-Price::placeholder,
+#Product-Description::placeholder {
+    font-size: 20px;
+    color: white;
+    text-indent: 22px;
+}
+
+#add-btn {
+    height: 65px;
+    width: 78%;
+    border: 1px solid white;
+    background: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid;
+    animation: colorChange 3s infinite;
+    box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(30, 64, 137, 0.5) -3px -3px 6px 1px inset;
+}
+
+#add-btn:hover{
+    border: 1px solid rgb(213, 23, 23);
+}
+
+#show-div {
+    height: 70%;
+    width: 50%;
+    overflow-y: scroll;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    border: 2px solid;
+    animation: colorChange 3s infinite;
+    box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(30, 64, 137, 0.5) -3px -3px 6px 1px inset;
+}
+
+#show-div::-webkit-scrollbar {
+    display: none;
+}
