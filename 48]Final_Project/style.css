@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .container {
     height: 100vh;
     width: 100%;
@@ -35,18 +36,21 @@
     animation: colorChange 3s infinite;
     box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(30, 64, 137, 0.5) -3px -3px 6px 1px inset;
 }
+
 @keyframes colorChange {
     0% {
         box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(27, 71, 110, 0.458) -3px -3px 6px 1px inset;
-        border-color:rgba(27, 71, 110, 0.458) ;
+        border-color: rgba(27, 71, 110, 0.458);
     }
+
     50% {
         box-shadow: rgba(88, 139, 190, 0.458) 3px 3px 6px 0px inset, rgba(100, 178, 197, 0.5) -3px -3px 6px 1px inset;
         border-color: rgba(38, 176, 194, 0.458);
     }
+
     100% {
         box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(27, 71, 110, 0.458) -3px -3px 6px 1px inset;
-        border-color:rgba(27, 71, 110, 0.458) ;
+        border-color: rgba(27, 71, 110, 0.458);
     }
 }
 
@@ -89,7 +93,7 @@
     box-shadow: rgba(27, 71, 110, 0.458) 3px 3px 6px 0px inset, rgba(30, 64, 137, 0.5) -3px -3px 6px 1px inset;
 }
 
-#add-btn:hover{
+#add-btn:hover {
     border: 1px solid rgb(213, 23, 23);
 }
 
