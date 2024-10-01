@@ -21,41 +21,39 @@
     </form>
 
     <script>
-        // Get the form element
-const form = document.getElementById('userForm');
+        const form = document.getElementById('userForm');
 
-// Add a submit event listener to the form
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    // Get the values from the form fields
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const age = document.getElementById('age').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
 
-    // Create an object to store the data
-    let userData = {
-        name: name,
-        email: email,
-        age: age
-    };
+            let userData = {
+                name: name,
+                email: email,
+                age: age
+            };
 
-    // Store the data in local storage as a JSON string
-    localStorage.setItem('userData', JSON.stringify(userData));
+            localStorage.setItem('userData', JSON.stringify(userData));
 
-    // Optionally, display a message or perform any other action
-    alert('Form data has been saved to local storage!');
-});
+            alert('Form data has been saved to local storage!');
+        });
 
-// Retrieve data from local storage
-const storedData = localStorage.getItem('userData');
+        // Retrieve data from local storage
+        try {
+            const storedData = localStorage.getItem('userData');
 
-if (storedData) {
-    const userData = JSON.parse(storedData);
-    console.log('Name:', userData.name);
-    console.log('Email:', userData.email);
-    console.log('Age:', userData.age);
-}
+            if (storedData) {
+                const userData = JSON.parse(storedData);
+                console.log('Name:', userData.name);
+                console.log('Email:', userData.email);
+                console.log('Age:', userData.age);
+            }
+        } catch (error) {
+            console.error('Error parsing JSON from local storage:', error);
+        }
     </script>
 </body>
 </html>
